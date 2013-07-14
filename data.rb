@@ -27,12 +27,16 @@ module DataBookmark
       @@data
     end
 
-    def categories(params = {})
+    def categories()
       @@categories
     end
 
     def add_category(category)
       @@categories[category.to_sym] = []
+    end
+
+    def merge!
+      @@data[:categories].merge! @@categories
     end
   end
 
