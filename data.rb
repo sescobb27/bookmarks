@@ -1,4 +1,5 @@
 module DataBookmark
+  load 'bookmark_database.rb'
   Uri = Struct.new(:desc, :url) do
     def to_h
       {
@@ -7,6 +8,7 @@ module DataBookmark
       }
     end
   end
+
   @@categories = { 
     ruby: [],
     android: [],
